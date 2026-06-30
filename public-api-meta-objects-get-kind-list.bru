@@ -1,0 +1,19 @@
+meta {
+  name: public-api-meta-objects-get-kind-list
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/api/public/v1/metadata/meta-objects/{{kind}}
+  body: none
+  auth: bearer
+}
+
+headers {
+  Accept: application/json
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}

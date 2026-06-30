@@ -1,0 +1,19 @@
+meta {
+  name: public-api-meta-object-kinds-get-collection
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/public/v1/metadata/meta-object-kinds
+  body: none
+  auth: bearer
+}
+
+headers {
+  Accept: application/json
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}

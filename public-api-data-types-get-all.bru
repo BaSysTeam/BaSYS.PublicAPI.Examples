@@ -1,0 +1,19 @@
+meta {
+  name: public-api-data-types-get-all
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/public/v1/metadata/data-types
+  body: none
+  auth: bearer
+}
+
+headers {
+  Accept: application/json
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}

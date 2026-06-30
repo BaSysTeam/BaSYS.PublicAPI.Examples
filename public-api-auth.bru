@@ -1,0 +1,23 @@
+meta {
+  name: public-api-auth
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/public/v1/auth/{{dbName}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "login": "{{login}}",
+    "password": "{{password}}"
+  }
+}

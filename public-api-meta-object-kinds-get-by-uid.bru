@@ -1,0 +1,19 @@
+meta {
+  name: public-api-meta-object-kinds-get-by-uid
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/public/v1/metadata/meta-object-kinds/{{metaObjectKindUid}}
+  body: none
+  auth: bearer
+}
+
+headers {
+  Accept: application/json
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
